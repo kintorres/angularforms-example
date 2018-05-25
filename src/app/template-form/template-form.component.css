@@ -1,0 +1,9 @@
+form{
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 100px;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
