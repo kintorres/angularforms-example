@@ -44,18 +44,32 @@ export class TemplateFormComponent implements OnInit {
 
   }
 
-  populaFormulario(dados, form){
-    form.setValue({
-      nome: null,
-      email: null,
+  populaFormulario(dados, formulario){
+    
+    // setValue() altera o valor de todos os campos do formulário
+
+    // formulario.setValue({
+    //   nome: formulario.value.nome,
+    //   email: formulario.value.email,
+    //   cep: dados.cep,
+    //   numero: '',
+    //   complemento: dados.complemento,
+    //   rua: dados.logradouro,
+    //   bairro: dados.bairro,
+    //   cidade: dados.localidade,
+    //   estado: dados.uf
+    // });
+
+    // patchValue() adiciona o valor de apenas alguns campos ao formulário
+    formulario.form.patchValue({
       cep: dados.cep,
-      numero: '',
       complemento: dados.complemento,
       rua: dados.logradouro,
       bairro: dados.bairro,
       cidade: dados.localidade,
       estado: dados.uf
     });
+    
   }
 
 }
