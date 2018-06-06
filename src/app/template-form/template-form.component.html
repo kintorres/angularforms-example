@@ -28,7 +28,7 @@
   <div class="form-group row">
     <div class="col-lg-3">
       <label for="cep" class="control-label">CEP</label>
-      <input type="text" class="form-control" id="cep" name="cep" ngModel required #cep="ngModel">
+      <input type="text" class="form-control" id="cep" name="cep" ngModel required #cep="ngModel" (blur)="consultaCEP($event.target.value, f)">
       <div id="alerta" class="alert alert-danger" role="alert" *ngIf="!cep.valid && cep.touched">
         CEP é obrigatório!
       </div>
