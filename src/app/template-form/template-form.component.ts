@@ -33,11 +33,7 @@ export class TemplateFormComponent implements OnInit {
        if(validacep.test(cep)) {
 
         this.http.get(`https://viacep.com.br/ws/${cep}/json`).subscribe(dados => this.populaFormulario(dados.json(), form));
-
-        // //Consulta o webservice viacep.com.br/
-        // $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
         
-        //   }
        }
 
     }
